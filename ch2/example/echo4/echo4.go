@@ -3,8 +3,9 @@ package echo4
 import (
 	"flag"
 	"fmt"
-	"github.com/paperplane/gopl.io/ch2/example/tempconv"
 	"strings"
+
+	"github.com/paperplane/gopl.io/ch2/example/tempconv"
 )
 
 var n = flag.Bool("n", false, "omit trailing newline")
@@ -35,7 +36,7 @@ func delta(new, old int) int {
 	return new - old
 }
 
-func main()  {
+func main() {
 	flag.Parse()
 	fmt.Print(strings.Join(flag.Args(), *sep))
 	if !*n {
@@ -59,8 +60,8 @@ func main()  {
 
 	fmt.Printf("%g\n", tempconv.BoilingC-tempconv.FreezingC)
 	boilingF := tempconv.CToF(tempconv.BoilingC)
-	fmt.Printf("%g\n", boilingF - tempconv.CToF(tempconv.FreezingC))
-	fmt.Printf("%g\n", tempconv.FToC(boilingF) -tempconv.FreezingC)
+	fmt.Printf("%g\n", boilingF-tempconv.CToF(tempconv.FreezingC))
+	fmt.Printf("%g\n", tempconv.FToC(boilingF)-tempconv.FreezingC)
 
 	var c tempconv.Celsius
 	var f tempconv.Fahrenheit
@@ -69,4 +70,3 @@ func main()  {
 	fmt.Println(c == tempconv.Celsius(f))
 	fmt.Println(c.String())
 }
-

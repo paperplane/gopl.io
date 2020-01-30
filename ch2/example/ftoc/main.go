@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
-func main()  {
+func main() {
 	const freezingF, boilingF = 32.0, 212.0
 
 	fmt.Printf("%gF = %gC\n", freezingF, fToC(freezingF))

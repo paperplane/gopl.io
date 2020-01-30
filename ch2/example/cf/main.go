@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/paperplane/gopl.io/ch2/example/tempconv"
 	"os"
 	"strconv"
+
+	"github.com/paperplane/gopl.io/ch2/example/tempconv"
 )
 
-func main()  {
+func main() {
 	for _, arg := range os.Args[1:] {
 		t, err := strconv.ParseFloat(arg, 64)
 		if err != nil {
